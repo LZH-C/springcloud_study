@@ -63,9 +63,14 @@ Zuul的主要功能是路由转发和过滤器
 2.开启@EnableZuulProxy
 3.继承extends ZuulFilter并实现方法
 
+高可用的分布式配置中心
+需要使用eureka和bus总线和config和actuator
+eureka用于注册服务,config用于拉取git等之类的配置文件,bus用于消息的总线发收,actuator用于暴露接口
+@EnableConfigServer启动configserver
+@RefreshScope用于消息刷新使用
 
-
-
+服务链路追踪zipkind的使用
+https://blog.csdn.net/forezp/article/details/81041078
 
 
 
