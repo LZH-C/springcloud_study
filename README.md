@@ -37,7 +37,20 @@ feign已经内置了断路器 需要在application.properties开启feign.hystrix
 @FeignClient(value = "service-hi",fallback = SchedualServiceHiHystric.class)
 断路器使用需要继承接口实现方法即可
 
-未完待续
+springcolud-zuul
+Zuul的主要功能是路由转发和过滤器
+路由转发即相当于负载均衡
+客户端的请求首先经过负载均衡（zuul、Ngnix），再到达服务网关（zuul集群），然后再到具体的服务
+实现：
+1.依赖<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+2.开启@EnableZuulProxy
+3.继承extends ZuulFilter并实现方法
+
+
+
 
 
 
